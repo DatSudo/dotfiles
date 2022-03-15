@@ -136,7 +136,7 @@ bindsym $mod+Shift+z exec --no-startup-id rofi -modi "Clipboard:greenclip print"
 bindsym $mod+Return exec --no-startup-id $terminal
 
 # OPEN ROFI
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 ###### EXECUTE PROGRAMS ######
 
