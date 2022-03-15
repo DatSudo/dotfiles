@@ -110,7 +110,7 @@ format-background = ${color.background}
 format-foreground = ${color.foreground}
 
 label = %title%
-label-maxlen = 100
+label-maxlen = 80
 
 label-empty = "Datsudo - Arch"
 label-empty-background = ${color.background}
