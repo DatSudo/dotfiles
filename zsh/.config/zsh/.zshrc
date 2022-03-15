@@ -1,6 +1,7 @@
 HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
+setopt SHARE_HISTORY
 
 # Go to directory just by specifying the directory name
 setopt autocd
