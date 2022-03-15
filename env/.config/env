@@ -1,0 +1,13 @@
+export PATH="$HOME/.local/bin:$PATH"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+
+export LESSHISTFILE="$HOME/.local/share/less/history"
+export LESSKEY="$HOME/.local/share/less/keys"
+
+export VIMINIT='let $MYVIMRC = !has("nvim") ? "$HOME/.config/vim/vimrc" : "$HOME/.config/nvim/init.vim" | so $MYVIMRC'
+export VIMDOTDIR="$HOME/.config/vim"
+
+export ZDOTDIR="$HOME/.config/zsh"

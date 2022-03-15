@@ -1,0 +1,48 @@
+# sudo aliases
+alias sduo='sudo'
+alias suod='sudo'
+alias sudp='sudo'
+alias sud='sudo'
+
+# list files
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# common commands
+alias v=vim
+alias cl=clear
+alias et=exit
+alias python=python3
+alias neofetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
+
+# Go to my Win10 files
+alias dpv='cd /win10/Users/Darylle/'
+
+#--------------------------------------------------------#
+
+# PACMAN
+
+alias archup='sudo pacman -Syu'
+alias upall='sudo pacman -Syuu'
+alias uppkg='sudo pacman -S $1'
+alias fupall='sudo pacman -Syyu'
+
+# list aur packages
+alias list_aur='sudo pacman -Qqm'
+
+# list native packages (exclude the version number)
+alias list_nat='sudo pacman -Qn | awk '\''{print $1}'\'''
+
+# list explicitly installed packages
+alias list_exp='sudo pacman -Qe'
+
+#--------------------------------------------------------#
+
+# CONFIG FILES
+
+alias coni3='v ~/.config/i3/config'
+alias conpol='v ~/.config/polybar/config.ini'
+
+#--------------------------------------------------------#
