@@ -1,0 +1,9 @@
+[color]
+
+transparent = #000000aa
+background = #282828
+foreground = #EBDBB2
+altforeground = #FABD2F
+uforeground = #CC241D
+dotforeground = #FBF1C7
+barforeground = #f8f8f2
