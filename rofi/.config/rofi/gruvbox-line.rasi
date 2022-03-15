@@ -1,0 +1,144 @@
+* {
+    normal-bg: #282828;
+    normal-fg: #ebdbb2;
+    selected-bg: #504945;
+    selected-fg: #ebdbb2;
+    active-bg: #282828;
+    active-fg: #fabd2f;
+    urgent-bg: #282828;
+    urgent-fg: #fb4934;
+    border-bg: #504945;
+    window-bg: #928374;
+
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    spacing: 0;
+
+    font: "monospace 11";
+    background-color: @normal-bg;
+    text-color: @normal-fg;
+    border-color: @border-bg;
+}
+
+#listview {
+    spacing: 0;
+    scrollbar: false;
+    dynamic: true;
+    lines: 100;
+    layout: horizontal;
+
+    margin: 0;
+}
+
+#window {
+    anchor: north;
+    location: north;
+    width: 100%;
+    height: 29;
+    border: 0 0 4 0;
+    border-radius: 0;
+
+    background-color: @normal-bg;
+    border-color: @window-bg;
+
+    children: [ horibox ];
+}
+
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+
+#mainbox {
+    padding: 0;
+    border: 0;
+}
+
+#element {
+    padding: 3 10 3 10;
+}
+
+#element.normal.normal {
+    background-color: @normal-bg;
+    text-color: @normal-fg;
+}
+
+#element.alternate.normal {
+    background-color: @normal-bg;
+    text-color: @normal-fg;
+}
+
+#element.selected.normal {
+    background-color: @selected-bg;
+    text-color: @normal-fg;
+}
+
+#element.normal.active {
+    background-color: @active-bg;
+    text-color: @active-fg;
+}
+
+#element.alternate.active {
+    background-color: @active-bg;
+    text-color: @active-fg;
+}
+
+#element.selected.active {
+    background-color: @selected-bg;
+    text-color: @active-fg;
+}
+
+#element.normal.urgent {
+    background-color: @urgent-bg;
+    text-color: @urgent-fg;
+}
+
+#element.alternate.urgent {
+    background-color: @urgent-bg;
+    text-color: @urgent-fg;
+}
+
+#element.selected.urgent {
+    background-color: @selected-bg;
+    text-color: @urgent-fg;
+}
+
+#inputbar {
+    margin: 0;
+    spacing: 0;
+}
+
+#prompt {
+    padding: 3 10 3 10;
+    border: 0 2 0 0;
+    expand: false;
+
+    border-color: @border-bg;
+}
+
+#entry {
+    padding: 3 10 3 10;
+    border: 0 2 0 0;
+    width: 10em;
+    expand: false;
+
+    border-color: @border-bg;
+}
+
+#scrollbar {
+    width: 0;
+    border: 0;
+
+    handle-color: @border-bg;
+    handle-width: 0;
+
+    background-color: @normal-bg;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+/* vim: set ft=css : */
