@@ -7,66 +7,32 @@ host = 127.0.0.1
 port = 6600
 interval = 1
 
-format-online =   
+format-online = <label-song> <bar-progress> <icon-prev>  <toggle>  <icon-next>
 format-online-font = 2
-format-online-background = ${color.background}
-format-online-foreground = ${color.foreground}
+format-online-padding = 2
+format-online-background = ${color.bg0}
+format-online-foreground = ${color.fg0}
 
-format-playing =   
-format-playing-font = 2
-format-playing-background = ${color.background}
-format-playing-foreground = ${color.foreground}
-
-format-paused =   
-format-paused-font = 2
-format-paused-background = ${color.background}
-format-paused-foreground = ${color.foreground}
-
-format-stopped =   
-format-stopped-font = 2
-format-stopped-background = ${color.background}
-format-stopped-foreground = ${color.foreground}
-
-format-offline =   
+format-offline = <label-offline>
 format-offline-font = 2
-format-offline-background = ${color.background}
-format-offline-foreground = ${color.foreground}
+format-offline-background = ${color.bg0}
+format-offline-foreground = ${color.fg0}
 
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+icon-play = 
+icon-pause = 
+icon-stop = 
+icon-next = 
+icon-prev = 
 
-[module/mpd2]
-type = internal/mpd
+label-song =   %artist% - %title%
+label-offline = Offline
+label-offline-foreground = ${color.fg0}
+label-offline-background = ${color.bg0}
 
-host = 127.0.0.1
-port = 6600
-interval = 1
-
-format-online = <label-song>
-format-online-font = 3
-format-online-background = ${color.background}
-format-online-foreground = ${color.foreground}
-
-format-playing = <label-song>
-format-playing-font = 3
-format-playing-background = ${color.background}
-format-playing-foreground = ${color.foreground}
-
-format-paused = <label-song>
-format-paused-font = 3
-format-paused-background = ${color.background}
-format-paused-foreground = ${color.foreground}
-
-format-stopped = Stopped
-format-stopped-font = 3
-format-stopped-background = ${color.background}
-format-stopped-foreground = ${color.foreground}
-
-format-offline = Offline
-format-offline-font = 3
-format-offline-background = ${color.background}
-format-offline-foreground = ${color.foreground}
-
-label-song = %artist% - %title%
+bar-progress-width = 10
+bar-progress-indicator = 
+bar-progress-fill = ━
+bar-progress-empty = ─
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -79,12 +45,12 @@ card = ${system.graphics_card}
 
 enable-scroll = true
 
-format = | <ramp> <label>
-format-background = ${color.background}
+format = <ramp> <label>
+format-background = ${color.bg1}
 format-padding = 1
 
 label = %percentage%%
-label-foreground = ${color.foreground}
+label-foreground = ${color.fg0}
 
 ramp-0 = " " 
 ramp-1 = " "
@@ -97,7 +63,7 @@ ramp-7 = " "
 ramp-8 = " "
 ramp-9 = " "
 ramp-font = 2
-ramp-foreground = ${color.foreground}
+ramp-foreground = ${color.fg0}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -106,15 +72,15 @@ type = internal/xwindow
 
 format = <label>
 format-padding = 1
-format-background = ${color.background}
-format-foreground = ${color.foreground}
+format-background = ${color.bg1}
+format-foreground = ${color.fg0}
 
 label = %title%
-label-maxlen = 80
+label-maxlen = 100
 
 label-empty = "Datsudo - Arch"
-label-empty-background = ${color.background}
-label-empty-foreground = ${color.foreground}
+label-empty-background = ${color.bg1}
+label-empty-foreground = ${color.fg0}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -130,19 +96,19 @@ interval = 5
 format-volume = <ramp-volume><label-volume>
 
 format-muted = <label-muted>
-format-muted-prefix = "   "
+format-muted-prefix = "  "
 format-muted-prefix-font = 2
-format-muted-prefix-foreground = ${color.foreground}
-format-muted-prefix-background = ${color.background}
+format-muted-prefix-foreground = ${color.fg0}
+format-muted-prefix-background = ${color.bg1}
 
-label-volume = "%percentage%%"
-label-muted = "Mute"
+label-volume = "%percentage%% "
+label-muted = " Mute "
 
-label-volume-background = ${color.background}
-label-muted-background = ${color.background}
+label-volume-background = ${color.bg1}
+label-muted-background = ${color.bg1}
 
-label-volume-foreground = ${color.foreground}
-label-muted-foreground = ${color.foreground}
+label-volume-foreground = ${color.fg0}
+label-muted-foreground = ${color.fg0}
 
 ramp-volume-0 = " "
 ramp-volume-1 = " "
@@ -156,8 +122,8 @@ ramp-volume-8 = " "
 ramp-volume-9 = " "
 ramp-volume-font = 2
 ramp-volume-padding = 1
-ramp-volume-foreground = ${color.foreground}
-ramp-volume-background = ${color.background}
+ramp-volume-foreground = ${color.fg0}
+ramp-volume-background = ${color.bg1}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
@@ -177,14 +143,12 @@ time-format = %H:%M
 
 format-charging = <animation-charging><label-charging>
 format-charging-prefix = 
-
 format-discharging = <ramp-capacity><label-discharging>
 
 format-full = <label-full>
 format-full-prefix = "   "
-format-full-prefix-font = 2
-format-full-prefix-foreground = ${color.foreground}
-format-full-prefix-background = ${color.background}
+format-full-prefix-foreground = ${color.fg0}
+format-full-prefix-background = ${color.bg1}
 
 label-charging = "%percentage%% "
 
@@ -192,13 +156,13 @@ label-discharging = "%percentage%% "
 
 label-full = "%percentage%% "
 
-label-charging-background = ${color.background}
-label-discharging-background = ${color.background}
-label-full-background = ${color.background}
+label-charging-background = ${color.bg1}
+label-discharging-background = ${color.bg1}
+label-full-background = ${color.bg1}
 
-label-charging-foreground = ${color.foreground}
-label-discharging-foreground = ${color.foreground}
-label-full-foreground = ${color.foreground}
+label-charging-foreground = ${color.fg0}
+label-discharging-foreground = ${color.fg0}
+label-full-foreground = ${color.fg0}
 
 ramp-capacity-0 = "   "
 ramp-capacity-1 = "   "
@@ -206,8 +170,8 @@ ramp-capacity-2 = "   "
 ramp-capacity-3 = "   "
 ramp-capacity-4 = "   "
 ramp-capacity-font = 2
-ramp-capacity-foreground = ${color.foreground}
-ramp-capacity-background = ${color.background}
+ramp-capacity-foreground = ${color.fg0}
+ramp-capacity-background = ${color.bg1}
 
 animation-charging-0 = "   "
 animation-charging-1 = "   "
@@ -215,8 +179,8 @@ animation-charging-2 = "   "
 animation-charging-3 = "   "
 animation-charging-4 = "   "
 animation-charging-font = 2
-animation-charging-foreground = ${color.foreground}
-animation-charging-background = ${color.background}
+animation-charging-foreground = ${color.fg0}
+animation-charging-background = ${color.bg1}
 animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -235,36 +199,46 @@ reverse-scroll = false
 
 fuzzy-match = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
+ws-icon-0 = 1;ㅤ
+ws-icon-1 = 2;ㅤ
+ws-icon-2 = 3;ㅤ
+ws-icon-3 = 4;ㅤ
+ws-icon-4 = 5;ㅤ
+ws-icon-5 = 6;ㅤ
+ws-icon-6 = 7;ㅤ
+ws-icon-7 = 8;ㅤ
+ws-icon-9 = 9;ㅤ
+ws-icon-10 = 10;ㅤ
 format = <label-state><label-mode>
 format-background = ${color.transparent}
 
 label-mode = %mode%
 label-mode-padding = 1
-label-mode-foreground = ${color.altforeground}
+label-mode-foreground = ${color.fg0}
 
-label-focused = 
-label-focused-foreground = ${color.altforeground}
+label-focused = %icon%
+label-focused-foreground = ${color.bg0}
+label-focused-background = ${color.fg0}
 
 label-unfocused = %icon%
-label-unfocused-foreground = ${color.altforeground}
+label-unfocused-foreground = ${color.fg0}
+label-unfocused-background = ${color.bg0}
 
 label-visible = %icon%
-label-visible-foreground = ${color.altforeground}
+label-visible-foreground = ${color.fg0}
+label-visible-background = ${color.bg0}
 
-label-urgent = 
-label-urgent-foreground = ${color.uforeground}
+label-urgent = %icon%
+label-urgent-foreground = ${color.bg0}
+label-urgent-background = ${color.bgu}
 
 label-focused-padding = 1
 label-unfocused-padding = 1
 label-visible-padding = 1
 label-urgent-padding = 1
+
+label-separator = ║
+label-separator-foreground = ${color.fg0}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -272,9 +246,10 @@ label-urgent-padding = 1
 type = internal/cpu
 interval = 2
 format-prefix = "  "
-format-prefix-foreground = ${color.foreground}
-format-foreground = ${color.foreground}
-format-background = ${color.background}
+format-prefix-font = 2
+format-prefix-foreground = ${color.fg0}
+format-foreground = ${color.fg0}
+format-background = ${color.bg1}
 label = "%{A1:kitty -e gtop &:}%percentage%% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -287,13 +262,13 @@ time = "%H:%M:%S "
 time-alt = "%A, %m-%d-%y "
 
 format-prefix = "  "
-format-prefix-font = 3
-format-prefix-foreground = ${color.foreground}
-format-prefix-background = ${color.background}
+format-prefix-font = 2
+format-prefix-foreground = ${color.fg0}
+format-prefix-background = ${color.bg1}
 
 label = %time%
-label-foreground = ${color.foreground}
-label-background = ${color.background}
+label-foreground = ${color.fg0}
+label-background = ${color.bg1}
 label-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -306,25 +281,27 @@ interval = 30
 fixed-values = true
 
 format-mounted = <label-mounted>
-format-mounted-prefix = ""
+format-mounted-prefix = " "
+format-mounted-prefix-font = 2
 format-mounted-prefix-padding = 1
-format-mounted-prefix-foreground = ${color.foreground}
-format-mounted-prefix-background = ${color.background}
+
+format-mounted-prefix-foreground = ${color.fg0}
+format-mounted-prefix-background = ${color.bg1}
 
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = ""
-format-unmounted-prefix-padding = 1
-format-unmounted-prefix-foreground = ${color.foreground}
-format-unmounted-prefix-background = ${color.background}
+format-unmounted-prefix-font = 2
+format-unmounted-prefix-foreground = ${color.fg0}
+format-unmounted-prefix-background = ${color.bg1}
 
-label-mounted = "%{A1:terminal -e ncdu &:} %free%%{A}"
+label-mounted = "%{A1:terminal -e ncdu &:}%free%%{A}"
 label-mounted-padding-right = 1
 label-unmounted = " %mountpoint%: NA"
 label-unmounted-padding-right = 1
-label-mounted-foreground = ${color.foreground}
+label-mounted-foreground = ${color.fg0}
 
-label-mounted-background = ${color.background}
-label-unmounted-background = ${color.background}
+label-mounted-background = ${color.bg1}
+label-unmounted-background = ${color.bg1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -334,22 +311,22 @@ type = internal/memory
 interval = 1
 
 format = <label>
-format-prefix = "|  "
-format-prefix-font = 4
-format-prefix-foreground = ${color.foreground}
-format-foreground = ${color.foreground}
-format-background = ${color.background}
+format-font = 4
+format-prefix = "  "
+format-prefix-font = 3
+format-prefix-foreground = ${color.fg0}
+format-foreground = ${color.fg0}
+format-background = ${color.bg1}
 
-label = "%{A1:alacritty -e gotop &:} %gb_used% %{A}"
+label = "%{A1:kitty gotop &:} %gb_used% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/launcher]
 type=custom/text
-content = "  "
-content-font = 2
-content-foreground = ${color.foreground}
-content-background = ${color.background}
+content = "   ║"
+content-foreground = ${color.fg0}
+content-background = ${color.bg1}
 click-left = rofi -show drun -show-icons
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -375,14 +352,14 @@ click-left = rofi -show drun -show-icons
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-prefix = "睊 "
 ;format-disconnected-prefix-font = 2
-;format-disconnected-foreground = ${color.background}
+;format-disconnected-foreground = ${color.bg1}
 ;format-disconnected-background = ${color.magenta}
 ;
 ;label-connected = "%{A1:def-nmdmenu &:}%essid%%{A}"
 ;label-disconnected = "%{A1:def-nmdmenu &:}Offline%{A}"
 ;
-;label-connected-foreground = ${color.background}
-;label-disconnected-foreground = ${color.background}
+;label-connected-foreground = ${color.bg1}
+;label-disconnected-foreground = ${color.bg1}
 ;
 ;label-connected-background = ${color.magenta}
 ;label-disconnected-background = ${color.magenta}
@@ -392,6 +369,6 @@ click-left = rofi -show drun -show-icons
 ;ramp-signal-2 = " "
 ;ramp-signal-3 = " "
 ;ramp-signal-4 = " "
-;ramp-signal-foreground = ${color.background}
+;ramp-signal-foreground = ${color.bg1}
 ;ramp-signal-background = ${color.magenta}
 ;ramp-signal-font = 2

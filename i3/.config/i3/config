@@ -3,10 +3,10 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $coloract "#ebdbb2"
+set $coloract "#504945"
 set $colorin "#1d2021"
 set $terminal kitty
-set $fg "#1d2021"
+set $fg "fbf1c7"
 set $fgu "ebdbb2"
 set $split "#567B84"
 set $coloru "#cc241d"
@@ -22,14 +22,14 @@ for_window [class="^.*"] border pixel 2
 gaps top 25
 gaps left 10
 gaps right 10
-gaps bottom 24
+gaps bottom 10
 gaps inner 5
 
 ######### COLORS ##########
 #
 # class                 border    backgr    text    indicator   child_border
 client.focused          $coloract $coloract $fg  	$colorin  	$coloract
-client.focused_inactive $coloract $coloract $fgu 	$colorin  	$colorin
+client.focused_inactive $coloract $coloract $fgu 	$colorin  	$coloract
 client.unfocused        $colorin  $colorin  $fgu  	$colorin  	$colorin
 client.urgent           $coloru   $coloru   $fg	 	$coloru 	$coloract
 client.placeholder      $color0   $color8   $fg 	$color0 	$coloract
@@ -225,6 +225,6 @@ for_window [class="feh"] floating enable
 exec --no-startup-id picom -f
 exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/Astro.jpg
+exec --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/gruv-gruvy.png
 exec_always --no-startup-id sleep 1 && ~/.config/polybar/launch.sh &
 exec --no-startup-id greenclip daemon>/dev/null

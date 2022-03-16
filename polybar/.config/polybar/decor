@@ -1,28 +1,5 @@
-[module/spacing]
+[module/sep]
 type = custom/text
-content = " "
-content-background = ${color.background}
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/dottop]
-type = custom/text
-;content = 
-content = ""
-
-content-font = 5
-content-background = ${color.transparent}
-content-foreground = ${color.dotforeground}
-content-padding = 1
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-[module/dotbottom]
-type = custom/text
-;content = 
-content = ""
-
-content-font = 4
-content-background = ${color.transparent}
-content-foreground = ${color.foreground}
-content-padding = 1
+content = "║"
+content-foreground = ${color.fg0}
+content-background = ${color.bg1}
