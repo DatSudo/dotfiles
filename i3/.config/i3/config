@@ -102,7 +102,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+p focus parent
 
 # SHOW POWER OPTIONS
-# bindsym XF86PowerOff exec --no-startup-id shutprompt
+bindsym $mod+b exec --no-startup-id shutprompt
 
 # TODO VOLUME KEYS
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -226,5 +226,5 @@ exec --no-startup-id picom -f
 exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
 exec --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/gruv-gruvy.png
-exec_always --no-startup-id sleep 1 && ~/.config/polybar/launch.sh &
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 exec --no-startup-id greenclip daemon>/dev/null

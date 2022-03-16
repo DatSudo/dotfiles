@@ -1,6 +1,6 @@
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/mpd1]
+[module/mpd]
 type = internal/mpd
 
 host = 127.0.0.1
