@@ -15,7 +15,7 @@ alias v=vim
 alias cl=clear
 alias et=exit
 alias python=python3
-# alias neofetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
+alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
 
 # Go to my Win10 files
 alias dpv='cd /win10/Users/Darylle/'
