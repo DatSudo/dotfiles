@@ -15,13 +15,29 @@ alias v=vim
 alias cl=clear
 alias et=exit
 alias python=python3
-alias neofetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
+# alias neofetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
 
 # Go to my Win10 files
 alias dpv='cd /win10/Users/Darylle/'
 
 #--------------------------------------------------------#
+# GIT
 
+alias gst='git status'
+alias gadd='git add $1'
+alias gcomt='git commit -m $1'
+alias git push='gp'
+
+#--------------------------------------------------------#
+# MANAGE DOTFILES
+
+alias dot='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles"'
+alias dotstat='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles" status'
+alias dotadd='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles" add $1'
+alias dotcom='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles" commit -m $1'
+alias dotpush='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles" push'
+
+#--------------------------------------------------------#
 # PACMAN
 
 alias archup='sudo pacman -Syu'
@@ -35,11 +51,10 @@ alias list_aur='sudo pacman -Qqm'
 # list native packages (exclude the version number)
 alias list_nat='sudo pacman -Qn | awk '\''{print $1}'\'''
 
-# list explicitly installed packages
-alias list_exp='sudo pacman -Qe'
+# list explicitly installed packages (exclude the version number)
+alias list_exp='sudo pacman -Qe | awk '\''{print $1}'\'''
 
 #--------------------------------------------------------#
-
 # CONFIG FILES
 
 alias coni3='v ~/.config/i3/config'
