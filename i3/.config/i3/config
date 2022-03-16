@@ -102,7 +102,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+p focus parent
 
 # SHOW POWER OPTIONS
-bindsym $mod+b exec --no-startup-id shutprompt
+bindsym XF86PowerOff exec --no-startup-id ~/.local/bin/shutprompt
 
 # TODO VOLUME KEYS
 set $refresh_i3status killall -SIGUSR1 i3status
