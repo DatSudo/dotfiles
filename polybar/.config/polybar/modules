@@ -275,7 +275,7 @@ format-prefix = "  "
 format-prefix-foreground = ${color.foreground}
 format-foreground = ${color.foreground}
 format-background = ${color.background}
-label = "%{A1:alacritty -e gtop &:}%percentage%% %{A}"
+label = "%{A1:kitty -e gtop &:}%percentage%% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

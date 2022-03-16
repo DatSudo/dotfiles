@@ -5,7 +5,7 @@
 set $mod Mod4
 set $coloract "#ebdbb2"
 set $colorin "#1d2021"
-set $terminal alacritty
+set $terminal kitty
 set $fg "#1d2021"
 set $fgu "ebdbb2"
 set $split "#567B84"
