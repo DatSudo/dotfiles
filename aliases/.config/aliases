@@ -16,6 +16,7 @@ alias cl=clear
 alias et=exit
 alias python=python3
 alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
+alias nfetchimg='neofetch --kitty --source ~/Pictures/profile.png'
 
 # Go to my Win10 files
 alias dpv='cd /win10/Users/Darylle/'
@@ -42,7 +43,7 @@ alias dotpush='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles
 
 alias archup='sudo pacman -Syu'
 alias upall='sudo pacman -Syuu'
-alias uppkg='sudo pacman -S $1'
+alias instpkg='sudo pacman -S $1'
 alias fupall='sudo pacman -Syyu'
 
 # list aur packages
@@ -58,6 +59,6 @@ alias list_exp='sudo pacman -Qe | awk '\''{print $1}'\'''
 # CONFIG FILES
 
 alias coni3='v ~/.config/i3/config'
-alias conpol='v ~/.config/polybar/config.ini'
+alias conpol='v ~/.config/polybar/modules ~/.config/polybar/config.ini'
 
 #--------------------------------------------------------#
