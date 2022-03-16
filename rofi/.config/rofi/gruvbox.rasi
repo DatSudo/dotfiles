@@ -13,9 +13,9 @@
     margin: 0;
     margin-bottom: 0;
     margin-top: 0;
-    spacing: 0;
+    spacing: 10;
 
-    font: "monospace 14";
+    font: "monospace 12";
     background-color: @normal-bg;
     text-color: @normal-fg;
     border-color: @border-bg;
@@ -32,6 +32,7 @@
 }
 
 #window {
+	height: 500;
     width: 600;
     border: 4;
     border-radius: 0;
@@ -45,7 +46,7 @@
 }
 
 #element {
-    padding: 16;
+    padding: 3;
 }
 
 #element.normal.normal {
