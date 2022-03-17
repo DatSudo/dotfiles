@@ -14,6 +14,7 @@ alias l='ls -CF'
 alias v=nvim
 alias cl=clear
 alias et=exit
+alias feh='feh --scale-down --auto-zoom'
 alias python=python3
 alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
 alias nfetchimg='neofetch --kitty --source ~/.config/neofetch/custom_img/nfetch_img.jpg'
