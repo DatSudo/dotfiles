@@ -15,7 +15,7 @@
     margin-top: 0;
     spacing: 10;
 
-    font: "monospace 12";
+    font: "JetBrainsMono Nerd Font 11";
     background-color: @normal-bg;
     text-color: @normal-fg;
     border-color: @border-bg;
