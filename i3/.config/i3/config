@@ -19,11 +19,11 @@ font pango:JetBrainsMono Nerd Font 8
 
 # i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps top 25
-gaps left 10
-gaps right 10
-gaps bottom 10
-gaps inner 5
+gaps top 20
+gaps left 0
+gaps right 0
+gaps bottom 0
+gaps inner 0
 
 ######### COLORS ##########
 #
@@ -39,49 +39,49 @@ client.background       $color0
 
 floating_modifier $mod
 
-# change focus
+# CHANGE FOCUS
 bindsym $mod+m focus down
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 bindsym $mod+i focus up
 
-# alternatively, you can use the cursor keys:
+# ALTERNATIVELY, YOU CAN USE THE CURSOR KEYS:
 bindsym $mod+Left  focus left
 bindsym $mod+Down  focus down
 bindsym $mod+Up    focus up
 bindsym $mod+Right focus right
 
-# move focused window
+# MOVE FOCUSED WINDOW
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+m move down
 bindsym $mod+Shift+i move up
 bindsym $mod+Shift+k move right
 
-# alternatively, you can use the cursor keys:
+# ALTERNATIVELY, YOU CAN USE THE CURSOR KEYS:
 bindsym $mod+Shift+Left  move left
 bindsym $mod+Shift+Down  move down
 bindsym $mod+Shift+Up    move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal and vertical orientation
+# SPLIT IN HORIZONTAL AND VERTICAL ORIENTATION
 bindsym $mod+Shift+v split v
 bindsym $mod+Shift+h split h
 
-# enter fullscreen mode for the focused container
+# ENTER FULLSCREEN MODE FOR THE FOCUSED CONTAINER
 bindsym $mod+f fullscreen toggle
 
 # KILL FOCUSED WINDOW
 bindsym $mod+q kill
 
-# change container layout (stacked, tabbed, toggle split)
+# CHANGE CONTAINER LAYOUT (STACKED, TABBED, TOGGLE SPLIT)
 bindsym $mod+w layout tabbed
 bindsym $mod+s layout stacking
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# TOGGLE TILING / FLOATING
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
+# CHANGE FOCUS BETWEEN TILING / FLOATING WINDOWS
 bindsym $mod+space focus mode_toggle
 
 # FOCUS PARENT
@@ -117,7 +117,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q 
 bindsym XF86TouchpadToggle exec --no-startup-id xinput --disable 12
 bindsym $mod+XF86TouchpadToggle exec --no-startup-id xinput --enable 12
 
-# TODO PRINT SCREEN
+# SCREENSHOT
 bindsym Print exec --no-startup-id flameshot full
 bindsym Shift+Print exec --no-startup-id flameshot gui
 
@@ -149,7 +149,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# switch to workspace
+# SWITCH WORKSPACE
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -161,7 +161,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move focused container to workspace
+# MOVE FOCUSED CONTAINER TO WORKSPACE
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -173,37 +173,44 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# reload the configuration file
+# RELOAD CONFIG FILE
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# RESTART i3 INPLACE
 bindsym $mod+Shift+r restart
 
-# exit i3 (logs you out of your X session)
+# LOGOUT OF i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# RESIZING WINDOWS
 mode "resize" {
-        # resize windows
-        bindsym l resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym h resize grow width 10 px or 10 ppt
+    # resize windows
+    bindsym l resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym h resize grow width 10 px or 10 ppt
 
-		# resize windows
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    # resize windows
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-		bindsym $mod+r mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
 ##### WINDOWS ######
 
 # TODO LAUNCH X APP IN Y WORKSPACE
+for_window [class="kitty"] move to workspace $ws1
+for_window [class="firefox"] move to workspace $ws2
+# for_window [class="brave"] move to workspace $ws2
+for_window [class="thunar"] move to workspace $ws3
+for_window [class="obsidian"] move to workspace $ws4
+for_window [class="libreoffice"] move to workspace $ws4
 
 # FORCE FLOAT FOR POP-UPS ETC
 for_window [window_role="pop-up"] floating enable
@@ -213,16 +220,16 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
-for_window [class="feh"] floating enable
+# START APPS IN FLOAT
+for_window [class="feh"] floating enable, resize set 640 480, move position center
 
 ###### STARTUP ######
 
 # TODO betterlockscreen
-# TODO compositor
 
 exec --no-startup-id picom -f
 exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-fill $HOME/Pictures/Wallpapers/gruv-gruvy.png
-exec_always --no-startup-id ~/.config/polybar/launch.sh &
+exec --no-startup-id feh --bg-fill $HOME/Documents/Pictures/Wallpapers/gruv-gruvy.png
 exec --no-startup-id greenclip daemon>/dev/null
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
