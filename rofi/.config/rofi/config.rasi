@@ -6,7 +6,7 @@ https://github.com/alfunx/.dotfiles/tree/master/.config/rofi
 */
 
 configuration {
-	modi: "window,run,ssh,drun,combi";
+	modi: "run,drun,filebrowser";
 	fixed-num-lines: true;
 	case-sensitive: false;
 	matching: "fuzzy";
