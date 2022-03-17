@@ -100,7 +100,7 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+p focus parent
 
 # SHOW POWER OPTIONS
-bindsym XF86PowerOff exec --no-startup-id ~/.local/bin/shutprompt
+bindsym XF86PowerOff exec --no-startup-id ~/.local/bin/power_opt
 
 # TODO VOLUME KEYS
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -124,6 +124,9 @@ bindsym Shift+Print exec --no-startup-id flameshot gui
 # SHOW CLIPBOARD
 bindsym $mod+Shift+z exec --no-startup-id rofi -modi "Clipboard:greenclip print" -show Clipboard -run-command '{cmd}'
 
+# BROWSE CONFIG FILES
+bindsym $mod+F2 exec --no-startup-id ~/.local/bin/config_opt
+
 # TODO P FILES BROWSER
 
 # TODO DEV FILES BROWSER
@@ -134,7 +137,7 @@ bindsym $mod+Shift+z exec --no-startup-id rofi -modi "Clipboard:greenclip print"
 bindsym $mod+Return exec --no-startup-id $terminal
 
 # OPEN ROFI
-bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -sidebar-mode
 
 ###### EXECUTE PROGRAMS ######
 
@@ -205,7 +208,6 @@ bindsym $mod+r mode "resize"
 ##### WINDOWS ######
 
 # TODO LAUNCH X APP IN Y WORKSPACE
-for_window [class="kitty"] move to workspace $ws1
 for_window [class="firefox"] move to workspace $ws2
 # for_window [class="brave"] move to workspace $ws2
 for_window [class="thunar"] move to workspace $ws3
