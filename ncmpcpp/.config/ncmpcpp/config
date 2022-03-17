@@ -3,7 +3,7 @@ lyrics_directory = ~/.config/ncmpcpp/.lyrics
 
 
 # Playlist
-playlist_disable_highlight_delay = "0"
+playlist_disable_highlight_delay = 1
 playlist_display_mode = "columns"
 playlist_show_remaining_time = "yes"
 
@@ -20,10 +20,13 @@ default_place_to_search_in = "database"
 # visualizer
 #visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
-#visualizer_sync_interval = "12"
+visualizer_sync_interval = 0
 #
 visualizer_type = "spectrum" (spectrum/wave)
 visualizer_in_stereo = "yes"
+visualizer_spectrum_smooth_look = yes
+visualizer_spectrum_gain = 10
+visualizer_autoscale = yes
 
 ## Navigation ##
 cyclic_scrolling = "yes"
@@ -68,7 +71,7 @@ media_library_primary_tag = album_artist
 media_library_hide_album_dates = yes
 
 
-visualizer_look = "▌▌"
+visualizer_look = "°┃"
 
 startup_screen = visualizer
 startup_slave_screen = playlist

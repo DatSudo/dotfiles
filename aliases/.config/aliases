@@ -11,12 +11,12 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # common commands
-alias v=vim
+alias v=nvim
 alias cl=clear
 alias et=exit
 alias python=python3
 alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
-alias nfetchimg='neofetch --kitty --source ~/Pictures/profile.png'
+alias nfetchimg='neofetch --kitty --source ~/.config/neofetch/custom_img/nfetch_img.jpg'
 
 # Go to my Win10 files
 alias dpv='cd /win10/Users/Darylle/'

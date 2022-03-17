@@ -1,10 +1,34 @@
-set wrap
-set nu
-set ai
-set tabstop=4
-set ls=2
+" Editor
+set wrap	 " word wrap
+set number	 " show line numbers
+set tabstop=4	 " show tab with 4 spaces
+set shiftwidth=4 " when indenting, use 4 spaces
+set expandtab    " on pressing tab, insert 4 spaces
+set ls=2	 " show status line
+
+set ai		 " enable autoindent
 set autoindent
 
+""" Key remaps
+nnoremap j gj
+nnoremap k gk
+
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right <Nop>
+
+inoremap <Up> <nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right <Nop>
+
+let mapleader = "\<Space>"
+nmap <Leader>q :q<CR> " quit
+nmap <Leader>w :w<CR> " save
+nmap <Leader>x :x<CR> " save and quit
+
+""" Set config, data directories
 set runtimepath^=$XDG_CONFIG_HOME/vim
 set runtimepath+=$XDG_DATA_HOME/vim
 set runtimepath+=$XDG_CONFIG_HOME/vim/after
@@ -20,4 +44,6 @@ set backupdir=$XDG_CACHE_HOME/vim/backup | call mkdir(&backupdir, 'p')
 set directory=$XDG_CACHE_HOME/vim/swap   | call mkdir(&directory, 'p')
 set undodir=$XDG_CACHE_HOME/vim/undo     | call mkdir(&undodir,   'p')
 
-if !has('nvim') | set viminfofile=$XDG_STATE_HOME/vim/viminfo | endif
+set viminfofile=$XDG_CONFIG_HOME/vim/viminfo
+
+if !has('nvim') | set viminfofile=$XDG_CONFIG_HOME/vim/viminfo | endif

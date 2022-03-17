@@ -24,7 +24,7 @@ icon-stop = 
 icon-next = 
 icon-prev = 
 
-label-song =   %artist% - %title%
+label-song = ┃   %artist% - %title%
 label-offline = Offline
 label-offline-foreground = ${color.fg0}
 label-offline-background = ${color.bg0}
@@ -164,20 +164,20 @@ label-charging-foreground = ${color.fg0}
 label-discharging-foreground = ${color.fg0}
 label-full-foreground = ${color.fg0}
 
-ramp-capacity-0 = "   "
-ramp-capacity-1 = "   "
-ramp-capacity-2 = "   "
-ramp-capacity-3 = "   "
-ramp-capacity-4 = "   "
+ramp-capacity-0 = "▏  "
+ramp-capacity-1 = "▏  "
+ramp-capacity-2 = "▏  "
+ramp-capacity-3 = "▏  "
+ramp-capacity-4 = "▏  "
 ramp-capacity-font = 2
 ramp-capacity-foreground = ${color.fg0}
 ramp-capacity-background = ${color.bg1}
 
-animation-charging-0 = "   "
-animation-charging-1 = "   "
-animation-charging-2 = "   "
-animation-charging-3 = "   "
-animation-charging-4 = "   "
+animation-charging-0 = "▏  "
+animation-charging-1 = "▏  "
+animation-charging-2 = "▏  "
+animation-charging-3 = "▏  "
+animation-charging-4 = "▏  "
 animation-charging-font = 2
 animation-charging-foreground = ${color.fg0}
 animation-charging-background = ${color.bg1}
@@ -199,21 +199,22 @@ reverse-scroll = false
 
 fuzzy-match = true
 
-ws-icon-0 = 1;ㅤ
-ws-icon-1 = 2;ㅤ
-ws-icon-2 = 3;ㅤ
-ws-icon-3 = 4;ㅤ
-ws-icon-4 = 5;ㅤ
-ws-icon-5 = 6;ㅤ
-ws-icon-6 = 7;ㅤ
-ws-icon-7 = 8;ㅤ
-ws-icon-9 = 9;ㅤ
-ws-icon-10 = 10;ㅤ
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
+
 format = <label-state><label-mode>
 format-background = ${color.transparent}
 
 label-mode = %mode%
-label-mode-padding = 1
+label-mode-padding = 0
 label-mode-foreground = ${color.fg0}
 
 label-focused = %icon%
@@ -225,8 +226,8 @@ label-unfocused-foreground = ${color.fg0}
 label-unfocused-background = ${color.bg0}
 
 label-visible = %icon%
-label-visible-foreground = ${color.fg0}
-label-visible-background = ${color.bg0}
+label-visible-foreground = ${color.bg0}
+label-visible-background = ${color.fg0}
 
 label-urgent = %icon%
 label-urgent-foreground = ${color.bg0}
@@ -236,9 +237,6 @@ label-focused-padding = 1
 label-unfocused-padding = 1
 label-visible-padding = 1
 label-urgent-padding = 1
-
-label-separator = ║
-label-separator-foreground = ${color.fg0}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -324,7 +322,7 @@ label = "%{A1:kitty gotop &:} %gb_used% %{A}"
 
 [module/launcher]
 type=custom/text
-content = "   ║"
+content = "   "
 content-foreground = ${color.fg0}
 content-background = ${color.bg1}
 click-left = rofi -show drun -show-icons
