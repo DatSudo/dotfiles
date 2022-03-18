@@ -1,6 +1,8 @@
 #!/bin/sh
 
-menu="feh
+menu="aliases
+feh
+functions
 i3
 kitty
 mpd
@@ -17,6 +19,8 @@ zsh"
 
 choice=$(echo "$menu" | rofi -dmenu -i -p "Edit config of:")
 case $choice in
+    "aliases") kitty nvim $HOME/.config/$choice;;
+    "functions") kitty nvim $HOME/.config/$choice;;
     "feh") kitty nvim $HOME/.config/feh/buttons;;
     "i3") kitty nvim $HOME/.config/i3/config;;
     "kitty") kitty nvim $HOME/.config/kitty/kitty.conf;;
