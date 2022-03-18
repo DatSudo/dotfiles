@@ -2,6 +2,7 @@
 
 menu="aliases
 bash
+dunst
 feh
 functions
 i3
@@ -28,18 +29,19 @@ case $choice in
     "aliases") kitty nvim $HOME/.config/$choice;;
     "bash") kitty nvim $HOME/.bashrc;;
     "functions") kitty nvim $HOME/.config/$choice;;
-    "feh") kitty nvim $HOME/.config/feh/buttons;;
-    "i3") kitty nvim $HOME/.config/i3/config;;
-    "kitty") kitty nvim $HOME/.config/kitty/kitty.conf;;
-    "mpd") kitty nvim $HOME/.config/mpd/mpd.conf;;
-    "ncmpcpp") kitty nvim $HOME/.config/ncmpcpp/config;;
-    "neofetch") kitty nvim $HOME/.config/neofetch/config.conf;;
+    "dunst") kitty nvim $HOME/.config/$choice/dunstrc;;
+    "feh") kitty nvim $HOME/.config/$choice/buttons;;
+    "i3") kitty nvim $HOME/.config/$choice/config;;
+    "kitty") kitty nvim $HOME/.config/$choice/kitty.conf;;
+    "mpd") kitty nvim $HOME/.config/$choice/mpd.conf;;
+    "ncmpcpp") kitty nvim $HOME/.config/$choice/config;;
+    "neofetch") kitty nvim $HOME/.config/$choice/config.conf;;
     "nvim") nav_config $choice;;
-    "picom") kitty nvim $HOME/.config/picom/picom.conf;;
+    "picom") kitty nvim $HOME/.config/$choice/picom.conf;;
     "polybar") nav_config $choice;; 
     "ranger") nav_config $choice;;
     "rofi") nav_config $choice;;
     "vim") nav_config $choice;;
     "zathura") nav_config $choice;;
-    "zsh") kitty nvim $HOME/.config/zsh/.zshrc;;
+    "zsh") kitty nvim $HOME/.config/$choice/.zshrc;;
 esac

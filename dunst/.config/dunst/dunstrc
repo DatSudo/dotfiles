@@ -21,7 +21,6 @@
     separator_height = 2
     padding = 8
     horizontal_padding = 8
-    text_icon_padding = 0
     frame_width = 2
     frame_color = "#504945"
     separator_color = frame
@@ -44,10 +43,10 @@
 
     ### Icons ###
 
-    icon_position = left
-    min_icon_size = 0
-    max_icon_size = 32
-    icon_path = /usr/share/icons/Gruvbox-Material-Dark/16x16/status/:/usr/share/icons/Gruvbox-Material-Dark/16x16/devices/
+#    icon_position = left
+#    min_icon_size = 0
+#    max_icon_size = 32
+#    icon_path = /usr/share/icons/Gruvbox-Material-Dark/16x16/status/:/usr/share/icons/Gruvbox-Material-Dark/16x16/devices/
 
     ### History ###
 
