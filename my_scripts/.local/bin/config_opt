@@ -1,0 +1,47 @@
+#!/bin/sh
+
+menu="feh
+i3
+kitty
+mpd
+ncmpcpp
+neofetch
+neovim
+picom
+polybar
+ranger
+rofi
+vim
+zathura
+zsh"
+
+choice=$(echo "$menu" | rofi -dmenu -i -p "Edit config of:")
+case $choice in
+    "feh") kitty nvim $HOME/.config/feh/buttons;;
+    "i3") kitty nvim $HOME/.config/i3/config;;
+    "kitty") kitty nvim $HOME/.config/kitty/kitty.conf;;
+    "mpd") kitty nvim $HOME/.config/mpd/mpd.conf;;
+    "ncmpcpp") kitty nvim $HOME/.config/ncmpcpp/config;;
+    "neofetch") kitty nvim $HOME/.config/neofetch/config.conf;;
+    "neovim")
+        f=$(ls $HOME/.config/nvim | rofi -dmenu -i -p "Neovim config file:")
+        kitty nvim $HOME/.config/nvim/$f
+        ;;
+    "picom") kitty nvim $HOME/.config/picom/picom.conf;;
+    "polybar")
+        f=$(ls $HOME/.config/polybar | rofi -dmenu -i -p "Polybar config file:")
+        kitty nvim $HOME/.config/polybar/$f
+        ;;
+    "ranger")
+        f=$(ls $HOME/.config/ranger | rofi -dmenu -i -p "Ranger config file:")
+        kitty nvim $HOME/.config/ranger/$f
+        ;;
+    "rofi")
+        f=$(ls $HOME/.config/rofi | rofi -dmenu -i -p "Rofi config file:")
+        kitty nvim $HOME/.config/rofi/$f;;
+    "vim")
+        kitty nvim $HOME/.config/vim/vimrc;;
+    "zathura")
+        kitty nvim $HOME/.config/zathura/zathurarc;;
+    "zsh") kitty nvim $HOME/.config/zsh/.zshrc;;
+esac

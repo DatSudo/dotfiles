@@ -1,0 +1,12 @@
+#!/bin/sh
+
+scr="config_opt
+power_opt
+scr_opt"
+
+choice=$(echo "$scr" | rofi -dmenu -i -p "Edit script:")
+case $choice in
+    "config_opt") kitty nvim $HOME/.local/bin/$choice;;
+    "power_opt") kitty nvim $HOME/.local/bin/$choice;;
+    "scr_opt") kitty nvim $HOME/.local/bin/$choice;;
+esac

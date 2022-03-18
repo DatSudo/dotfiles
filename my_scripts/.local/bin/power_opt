@@ -1,0 +1,11 @@
+#!/bin/bash
+
+option=$(echo -e "Reboot\nShutdown" | dmenu -i -p "Power Options:" -nb "#1d2021" -nf "#ebdbb2" -sb "#ebdbb2" -sf "#1d2021")
+if [ "$option" != "" ]; then
+    choice=$(echo -e "No\nYes" | dmenu -i -p "Are you sure?" -nb "#1d2021" -nf "#ebdbb2" -sb "#ebdbb2" -sf "#1d2021")
+	if [ "$option" == "Reboot" ] && [ "$choice" == "Yes" ]; then
+		systemctl reboot
+	elif [ "$option" == "Shutdown" ] && [ "$choice" == "Yes" ]; then
+		systemctl poweroff
+	fi
+fi
