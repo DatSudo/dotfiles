@@ -19,6 +19,11 @@ let mapleader = "\<Space>"
 nmap <Leader>q :q<CR> " quit
 nmap <Leader>w :w<CR> " save
 nmap <Leader>x :wq<CR> " save and quit
+nmap <Leader>z :q!<CR> " quit without saving
 
 " Remove highlights after search
 nnoremap <CR> :noh<CR>
+
+" Nerd tree
+let NERDTreeShowHidden=1
+nnoremap <C-n> :NERDTreeToggle<CR>

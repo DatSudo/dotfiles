@@ -19,7 +19,7 @@ font pango:JetBrainsMono Nerd Font 8
 
 # i3-gaps
 for_window [class="^.*"] border pixel 2
-gaps top 20
+gaps top 19
 gaps left 0
 gaps right 0
 gaps bottom 0
@@ -28,8 +28,8 @@ gaps inner 0
 ######### COLORS ##########
 #
 # class                 border    backgr    text    indicator   child_border
-client.focused          $coloract $coloract $fg  	$colorin  	$coloract
-client.focused_inactive $coloract $coloract $fgu 	$colorin  	$colorin
+client.focused          $coloract $coloract $fg  	$coloract   $coloract
+client.focused_inactive $coloract $coloract $fgu 	$colorin    $colorin
 client.unfocused        $colorin  $colorin  $fgu  	$colorin  	$colorin
 client.urgent           $coloru   $coloru   $fg	 	$coloru 	$coloract
 client.placeholder      $color0   $color8   $fg 	$color0 	$coloract
