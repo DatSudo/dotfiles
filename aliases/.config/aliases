@@ -28,7 +28,7 @@ alias dpv='cd /win10/Users/Darylle/'
 alias gst='git status'
 alias gadd='git add $1'
 alias gcomt='git commit -m $1'
-alias git push='gp'
+alias gp='git push'
 
 #--------------------------------------------------------#
 # MANAGE DOTFILES
