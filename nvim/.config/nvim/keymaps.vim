@@ -9,10 +9,10 @@ nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 
 " Disable arrow keys : insert mode
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
+" inoremap <Up> <Nop>
+" inoremap <Down> <Nop>
+" inoremap <Left> <Nop>
+" inoremap <Right> <Nop>
 
 " Remap save, quit
 let mapleader = "\<Space>"

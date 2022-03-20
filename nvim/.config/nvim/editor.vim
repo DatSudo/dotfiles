@@ -11,5 +11,11 @@ set ai           " enable autoindent
 set autoindent
 set mouse=a
 set nobackup
+set nowritebackup
 set ignorecase
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
 syntax enable
+
+let g:Hexokinase_highlighters = ['backgroundfull']

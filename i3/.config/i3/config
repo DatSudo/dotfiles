@@ -79,7 +79,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+e layout toggle split
 
 # TOGGLE TILING / FLOATING
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle, resize set 1000 700, move position center
 
 # CHANGE FOCUS BETWEEN TILING / FLOATING WINDOWS
 bindsym $mod+space focus mode_toggle
@@ -130,11 +130,8 @@ bindsym $mod+F2 exec --no-startup-id ~/.local/bin/config_opt
 # EDIT SCRIPTS
 bindsym $mod+F3 exec --no-startup-id ~/.local/bin/scr_opt
 
-# TODO P FILES BROWSER
-
-# TODO DEV FILES BROWSER
-
-# TODO SCHOOL FILES BROWSER
+# MY WIN10 FILES BROWSER
+bindsym $mod+F4 exec --no-startup-id ~/.local/bin/files_opt
 
 # OPEN TERMINAL
 bindsym $mod+Return exec --no-startup-id $terminal
