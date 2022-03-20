@@ -1,0 +1,34 @@
+#!/bin/sh
+
+dir=/win10/Users/Darylle/Desktop/Library
+
+menu="Ebooks
+Dev Courses
+Dev Manuals
+P Files
+Sc Files
+"
+
+open_file() {
+    s=$(ls $dir/"$1" | rofi -dmenu -i -p "Open subject:")
+    f=$(ls $dir/"$1"/"$s" | rofi -dmenu -i p "Open file:")
+    [ "$f" != "" ] && xdg-open $dir/"$1"/"$s"/"$f" &
+}
+open_dir() {
+    d=$(ls $dir/"$1" | rofi -dmenu -i -p "Open directory:")
+    [ "$d" != "" ] && kitty ranger $dir/"$1"/"$s"
+}
+
+open_file2() {
+    f=$(ls $dir/"$1" | rofi -dmenu -i -p "Open file:")
+    [ "$f" != "" ] && xdg-open $dir/"$1"/"$f" &
+}
+
+choice=$(echo "$menu" | rofi -dmenu -i -p "Open file:")
+case $choice in
+    "Ebooks") open_file2 "Read";;
+    "Dev Courses") open_dir "DLed Crses";;
+    "Dev Manuals") open_file "Dev/Dev Manuals";;
+    "P Files") open_file2 "P Files";;
+    "Sc Files") open_file "Year 1";;
+esac
