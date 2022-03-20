@@ -26,7 +26,7 @@ compinit
 
 # Import aliases and functions
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
-[ -f "$HOME/.config/functions" ] && . "$HOME/.config/aliases"
+[ -f "$HOME/.config/functions" ] && . "$HOME/.config/functions"
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
