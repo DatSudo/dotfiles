@@ -1,0 +1,7 @@
+function acs(){
+  (( $+commands[python] )) || {
+    echo "[error] No python executable detected"
+    return
+  }
+  alias | python $HOME/.local/bin/alias_cheatsheet.py $@
+}
