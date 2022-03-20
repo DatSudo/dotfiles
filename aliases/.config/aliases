@@ -6,9 +6,11 @@ alias sud='sudo'
 
 # list files
 
+alias ls=lsd
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
+alias lt='ls --tree'
+alias l='ls -l'
 
 # common commands
 alias v=nvim
