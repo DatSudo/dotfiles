@@ -310,7 +310,7 @@ interval = 1
 
 format = <label>
 format-font = 4
-format-prefix = "  "
+format-prefix = "  "
 format-prefix-font = 3
 format-prefix-foreground = ${color.fg0}
 format-foreground = ${color.fg0}
