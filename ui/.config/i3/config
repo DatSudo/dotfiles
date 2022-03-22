@@ -232,6 +232,7 @@ for_window [class="feh"] floating enable, resize set 640 480, move position cent
 exec --no-startup-id picom -f
 exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
+exec --no-startup-id lxpolkit &>/dev/null
 exec --no-startup-id feh --bg-fill ~/files/pictures/Wallpapers/gruv-gruvy.jpg
 exec --no-startup-id greenclip daemon>/dev/null
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
