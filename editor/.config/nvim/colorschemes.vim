@@ -2,5 +2,5 @@ set termguicolors
 set background=dark
 colorscheme gruvbox
 
-" Statusline
-let g:airline_theme='gruvbox'
+hi! TabLineFill guibg=#1D2021
+

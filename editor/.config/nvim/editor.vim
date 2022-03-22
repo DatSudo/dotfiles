@@ -18,4 +18,6 @@ set updatetime=300
 set shortmess+=c
 syntax enable
 
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
+
 let g:Hexokinase_highlighters = ['backgroundfull']

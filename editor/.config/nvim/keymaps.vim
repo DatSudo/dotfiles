@@ -24,13 +24,13 @@ nmap <Leader>z :q!<CR> " quit without saving
 " Remove highlights after search
 nnoremap <CR> :noh<CR>
 
-" Nerd tree
-let NERDTreeShowHidden=1
-let NERDTreeMapOpenInTab='\r'
-nnoremap <C-n> :NERDTreeToggle<CR>
-
 " Toggle comment
 map <C-_> :Commentary<CR>
+
+" nvim-tree
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " Toggle terminal
 map <C-t> :ToggleTerm<CR>
@@ -38,7 +38,13 @@ map <C-t> :ToggleTerm<CR>
 " Close tab
 nnoremap <C-w> :bd<CR>
 
-" Goto buffer in position n
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Goto buffer in position...
 nnoremap <silent>    <A-1> :BufferGoto 1<CR>
 nnoremap <silent>    <A-2> :BufferGoto 2<CR>
 nnoremap <silent>    <A-3> :BufferGoto 3<CR>
@@ -48,3 +54,7 @@ nnoremap <silent>    <A-6> :BufferGoto 6<CR>
 nnoremap <silent>    <A-7> :BufferGoto 7<CR>
 nnoremap <silent>    <A-8> :BufferGoto 8<CR>
 nnoremap <silent>    <A-9> :BufferLast<CR>
+" Pin/unpin buffer
+nnoremap <silent>    <A-p> :BufferPin<CR>
+" Close buffer
+nnoremap <silent>    <A-c> :BufferClose<CR>
