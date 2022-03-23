@@ -1,6 +1,7 @@
 #!/bin/sh
 
 scr="config_opt
+files_opt
 power_opt
 scr_opt"
 
