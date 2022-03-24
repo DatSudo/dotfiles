@@ -24,6 +24,14 @@ zstyle :compinstall filename '/home/datsudo/.zshrc'
 autoload -Uz compinit
 compinit
 
+# Auto-quote pasted links
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
+autoload -Uz url-quote-magic
+zle -N self-insert url-quote-magic
+
+
 # Import aliases and functions
 [ -f "$HOME/.config/aliases" ] && . "$HOME/.config/aliases"
 [ -f "$HOME/.config/functions" ] && . "$HOME/.config/functions"

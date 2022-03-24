@@ -7,6 +7,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export LESSHISTFILE="$HOME/.local/share/less/history"
 export LESSKEY="$HOME/.local/share/less/keys"
 
+export GVIMINIT='let $MYGVIMRC = !has("nvim") ? "$HOME/.config/vim/gvimrc" : "$HOME/.config/nvim/init.gvim" | so $MYGVIMRC'
 export VIMINIT='let $MYVIMRC = !has("nvim") ? "$HOME/.config/vim/vimrc" : "$HOME/.config/nvim/init.vim" | so $MYVIMRC'
 export VIMDOTDIR="$HOME/.config/vim"
 
