@@ -10,6 +10,7 @@ kitty
 mpd
 ncmpcpp
 neofetch
+newsboat
 nvim
 picom
 polybar
@@ -36,6 +37,7 @@ case $choice in
     "mpd") kitty nvim $HOME/.config/$choice/mpd.conf;;
     "ncmpcpp") kitty nvim $HOME/.config/$choice/config;;
     "neofetch") kitty nvim $HOME/.config/$choice/config.conf;;
+    "newsboat") nav_config $choice;;
     "nvim") nav_config $choice;;
     "picom") kitty nvim $HOME/.config/$choice/picom.conf;;
     "polybar") nav_config $choice;; 
