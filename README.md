@@ -1,5 +1,5 @@
 <div align="center">
-	<h1><code>~/.*</code></h1>
+	<h1 style="font-size: 40px;"><code>~/.*</code></h1>
 	<p>My config files. Managed by <a href="https://www.gnu.org/software/stow/">GNU Stow</a>.</p>
 </div>
 
@@ -15,13 +15,13 @@ ___
 
 ### Installation
 
-- Check first all the packages in [package lists](https://github.com/DatSudo/dotfiles/tree/main/.pkglist/) and install them. There are some packages that depends on your hardware (e.g. graphics/driver-related packages such as `intel-media-driver` etc.) and you might want to skip.
-- List of packagess in `.pkglist`. Read more [here](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Listing_packages):
+- Check first all the packages in [package lists](https://github.com/DatSudo/dotfiles/tree/main/.pkglist/) and install them. There are some packages that depend on your hardware (e.g. graphics/driver-related packages such as `intel-media-driver` etc.) and you might want to skip them.
+- List of packages in `.pkglist`. Read more [here](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Listing_packages):
     - `aurpkg` - list of all AUR packages installed
     - `exppkg` - explicitly installed packages
     - `ntvpkg` - list of all native packages (installed from the sync databases)
     - `exp_ntvpkg` - explicitly installed native packages
-- If you're not familiar with GNU stow, just clone this repository and copy the config files.
+- If you're not familiar with GNU stow, clone this repository and copy the config files.
 - With GNU stow:
     - You might want to backup some files/directories in your `.config` file that you want to change and move them to other location before stowing so there won't be any conflict warnings.
     - You can stow them one-by-one with
