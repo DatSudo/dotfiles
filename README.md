@@ -93,7 +93,7 @@ ___
     <summary><b>Editor, file viewers</b></summary>
 
 <img src="https://github.com/DatSudo/dotfiles/blob/main/.images/editorfv_ss1.png" alt="Editor, file viewers screenshot 1">
-<img src="https://github.com/DatSudo/dotfiles/blob/main/.images/editorfv_ss1.png" alt="Editor, file viewers screenshot 2">
+<img src="https://github.com/DatSudo/dotfiles/blob/main/.images/editorfv_ss2.png" alt="Editor, file viewers screenshot 2">
 
 </details>
 
