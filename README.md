@@ -92,7 +92,8 @@ ___
 <details>
     <summary><b>Editor, file viewers</b></summary>
 
-<img src="https://github.com/DatSudo/dotfiles/blob/main/.images/editorfv_ss.png" alt="Editor, file viewers screenshots">
+<img src="https://github.com/DatSudo/dotfiles/blob/main/.images/editorfv_ss1.png" alt="Editor, file viewers screenshot 1">
+<img src="https://github.com/DatSudo/dotfiles/blob/main/.images/editorfv_ss1.png" alt="Editor, file viewers screenshot 2">
 
 </details>
 
@@ -101,5 +102,5 @@ ___
 ### TODO:
 
 - [ ] More notes
-- [ ] Screenshots
+- [x] Screenshots
 - [ ] License
