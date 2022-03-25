@@ -102,5 +102,6 @@ ___
 ### TODO:
 
 - [ ] More notes
+- [ ] Credits
 - [x] Screenshots
 - [ ] License
