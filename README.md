@@ -62,6 +62,8 @@ ___
     PASSWORD_STORE_DIR="/home/your_username/.local/share/pass"
     GNUPGHOME="/home/your_username/.local/share/gnupg"
     ```
+- For my firefox custom css, you need to copy and paste the [`chrome`](https://github.com/DatSudo/dotfiles/tree/main/firefox/.mozilla/firefox/any.default-release/chrome) folder manually in your `$HOME/.mozilla/firefox/random-chars.default-release` as I added `.mozilla/` in [`.stow-local-ignore`](https://github.com/DatSudo/dotfiles/blob/main/firefox/.stow-local-ignore); I think the `random-chars.default-release` folder name is not the same for everyone.
+
 ___
 
 ### Screenshots
