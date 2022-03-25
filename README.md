@@ -104,4 +104,4 @@ ___
 - [ ] More notes
 - [ ] Credits
 - [x] Screenshots
-- [ ] License
+- [x] License
