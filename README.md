@@ -1,5 +1,5 @@
 <div align="center">
-	<h1 style="font-size: 40px;"><code>~/.*</code></h1>
+	<h1 style="font-size: 100px;"><code>~/.*</code></h1>
 	<p>My config files. Managed by <a href="https://www.gnu.org/software/stow/">GNU Stow</a>.</p>
 </div>
 
