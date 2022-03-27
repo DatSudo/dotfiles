@@ -5,3 +5,7 @@ function acs(){
   }
   alias | python $HOME/.local/bin/alias_cheatsheet.py $@
 }
+
+function crun(){
+    gcc $1 && ./a.out
+}
