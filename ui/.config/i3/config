@@ -124,6 +124,10 @@ bindsym Shift+Print exec --no-startup-id flameshot gui
 # SHOW CLIPBOARD
 bindsym $mod+Shift+z exec --no-startup-id rofi -modi "Clipboard:greenclip print" -show Clipboard -run-command '{cmd}'
 
+# SHOW SCHEDULE
+bindsym $mod+F1 exec --no-startup-id eww open scheds
+bindsym $mod+Shift+F1 exec --no-startup-id eww close scheds
+
 # EDIT CONFIG FILES
 bindsym $mod+F2 exec --no-startup-id ~/.local/bin/config_opt
 
@@ -229,6 +233,7 @@ for_window [window_type="menu"] floating enable
 exec --no-startup-id picom -f
 exec --no-startup-id wal -R
 exec --no-startup-id nm-applet
+exec --no-startup-id eww daemon &>/dev/null
 exec --no-startup-id lxpolkit &>/dev/null
 exec --no-startup-id feh --bg-fill ~/files/pictures/Wallpapers/gruv-gruvy.jpg
 exec --no-startup-id greenclip daemon>/dev/null
