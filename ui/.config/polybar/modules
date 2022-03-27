@@ -271,6 +271,24 @@ label-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+;; From chebro:
+;; https://github.com/chebro/calendar-notification
+
+[module/calendar]
+type = custom/script
+;label = "  Calendar "
+;label-padding-left = 1
+;label-foreground = ${color.fg0}
+;label-background = ${color.bg1}
+format-foreground = ${color.fg0}
+format-background = ${color.bg1}
+exec = ~/.local/bin/curr_date
+click-left = ~/.local/bin/calendar curr
+scroll-up = ~/.local/bin/calendar next
+scroll-down = ~/.local/bin/calendar prev
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
 [module/filesystem]
 type = internal/fs
 
