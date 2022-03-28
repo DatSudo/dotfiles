@@ -1,7 +1,7 @@
 <div align="center">
 	<h1><code>~/.*</code></h1>
 	<p>My config files. Managed by <a href="https://www.gnu.org/software/stow/">GNU Stow</a>.</p>
-    <p>Layout/theme inspired by [alfunx's](https://github.com/alfunx/.dotfiles) dotfiles</p>
+    <p>Layout/theme inspired by <a href="https://github.com/alfunx/.dotfiles">alfunx's dotfiles</a>.</p>
 </div>
 
 ___
