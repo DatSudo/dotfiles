@@ -7,11 +7,16 @@ host = 127.0.0.1
 port = 6600
 interval = 1
 
-format-online = <label-song> <bar-progress> <icon-prev>  <toggle>  <icon-next>
+format-online = <label-song> <bar-progress> <icon-prev>  <toggle>  <icon-next> 
 format-online-font = 2
 format-online-padding = 2
 format-online-background = ${color.bg0}
 format-online-foreground = ${color.fg0}
+
+format-stopped = <label-offline>
+format-stopped-font = 2
+format-stopped-background = ${color.bg0}
+format-stopped-foreground = ${color.fg0}
 
 format-offline = <label-offline>
 format-offline-font = 2
@@ -25,7 +30,8 @@ icon-next = 
 icon-prev = 
 
 label-song = ┃   %artist% - %title%
-label-offline = Offline
+
+label-offline = ┃   MPD
 label-offline-foreground = ${color.fg0}
 label-offline-background = ${color.bg0}
 
@@ -96,7 +102,7 @@ interval = 5
 format-volume = <ramp-volume><label-volume>
 
 format-muted = <label-muted>
-format-muted-prefix = "  "
+format-muted-prefix = "   "
 format-muted-prefix-font = 2
 format-muted-prefix-foreground = ${color.fg0}
 format-muted-prefix-background = ${color.bg1}
@@ -108,7 +114,7 @@ label-volume-background = ${color.bg1}
 label-muted-background = ${color.bg1}
 
 label-volume-foreground = ${color.fg0}
-label-muted-foreground = ${color.fg0}
+label-muted-foreground = ${color.fgl}
 
 ramp-volume-0 = " "
 ramp-volume-1 = " "
@@ -141,8 +147,10 @@ adapter = ${system.adapter}
 poll-interval = 2
 time-format = %H:%M
 
-format-charging = <animation-charging><label-charging>
-format-charging-prefix = 
+format-charging-prefix = "  "
+format-charging = <label-charging>
+format-charging-prefix-foreground = ${color.fg0}
+format-charging-prefix-background = ${color.bg1}
 format-discharging = <ramp-capacity><label-discharging>
 
 format-full = <label-full>
@@ -160,28 +168,32 @@ label-charging-background = ${color.bg1}
 label-discharging-background = ${color.bg1}
 label-full-background = ${color.bg1}
 
-label-charging-foreground = ${color.fg0}
+label-charging-foreground = ${color.bgu}
 label-discharging-foreground = ${color.fg0}
-label-full-foreground = ${color.fg0}
+label-full-foreground = ${color.fgu}
 
-ramp-capacity-0 = "▏  "
-ramp-capacity-1 = "▏  "
-ramp-capacity-2 = "▏  "
-ramp-capacity-3 = "▏  "
-ramp-capacity-4 = "▏  "
+ramp-capacity-0 = "  "
+ramp-capacity-1 = "  "
+ramp-capacity-2 = "  "
+ramp-capacity-3 = "  "
+ramp-capacity-4 = "  "
 ramp-capacity-font = 2
-ramp-capacity-foreground = ${color.fg0}
+ramp-capacity-0-foreground = ${color.fga}
+ramp-capacity-1-foreground = ${color.fga}
+ramp-capacity-2-foreground = ${color.fg0}
+ramp-capacity-3-foreground = ${color.fg0}
+ramp-capacity-4-foreground = ${color.fg0}
 ramp-capacity-background = ${color.bg1}
 
-animation-charging-0 = "▏  "
-animation-charging-1 = "▏  "
-animation-charging-2 = "▏  "
-animation-charging-3 = "▏  "
-animation-charging-4 = "▏  "
-animation-charging-font = 2
-animation-charging-foreground = ${color.fg0}
-animation-charging-background = ${color.bg1}
-animation-charging-framerate = 750
+;animation-charging-0 = "  "
+;animation-charging-1 = "  "
+;animation-charging-2 = "  "
+;animation-charging-3 = "  "
+;animation-charging-4 = "  "
+;animation-charging-font = 2
+;animation-charging-foreground = ${color.fg0}
+;animation-charging-background = ${color.bg1}
+;animation-charging-framerate = 750
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -259,12 +271,14 @@ format-margin = 0
 time = "%H:%M:%S "
 time-alt = "%A, %m-%d-%y "
 
-format-prefix = "  "
+;format-prefix = "  "
+format-prefix = "  "
 format-prefix-font = 2
 format-prefix-foreground = ${color.fg0}
 format-prefix-background = ${color.bg1}
 
 label = %time%
+label-font = 6
 label-foreground = ${color.fg0}
 label-background = ${color.bg1}
 label-padding = 1
@@ -276,16 +290,27 @@ label-padding = 1
 
 [module/calendar]
 type = custom/script
-;label = "  Calendar "
-;label-padding-left = 1
-;label-foreground = ${color.fg0}
-;label-background = ${color.bg1}
 format-foreground = ${color.fg0}
 format-background = ${color.bg1}
 exec = ~/.local/bin/curr_date
 click-left = ~/.local/bin/calendar curr
 scroll-up = ~/.local/bin/calendar next
 scroll-down = ~/.local/bin/calendar prev
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+interface = wlo1
+interval = 1.0
+
+label-connected = "  %downspeed% |  %upspeed% "
+label-connected-foreground = ${color.fg0}
+label-connected-background = ${color.bg1}
+
+label-disconnected = " Disconnected"
+label-disconnected-foreground = ${color.fgl}
+label-disconnected-background = ${color.bg1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 

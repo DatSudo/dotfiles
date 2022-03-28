@@ -15,3 +15,9 @@ type = custom/text
 content = "▏"
 content-foreground = ${color.fg0}
 content-background = ${color.bg0}
+
+[module/sep4]
+type = custom/text
+content = "▏"
+content-foreground = ${color.fg0}
+content-background = ${color.bg1}
