@@ -9,3 +9,7 @@ function acs(){
 function crun(){
     gcc $1 && ./a.out
 }
+
+function pi(){
+    pass insert $1 && pass git push
+}
