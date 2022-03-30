@@ -1,5 +1,5 @@
 #!/bin/sh
 
 symb=" "
-date=$(date '+%A, %B %d')
+date=$(date '+%a, %b %d')
 echo " $symb $date "
