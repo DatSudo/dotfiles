@@ -226,6 +226,9 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
+# START WINDOW IN FLOAT
+for_window [class="VirtualBox Machine"] floating enable, move position center
+
 ###### STARTUP ######
 
 # TODO betterlockscreen
