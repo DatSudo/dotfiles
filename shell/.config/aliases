@@ -38,6 +38,16 @@ alias gcomt='git commit -m $1'
 alias gp='git push'
 
 #--------------------------------------------------------#
+# PASS
+
+alias potp='pass otp'
+alias passup='pass update -p'
+alias passp='pass git push'
+alias passa='pass git add .'
+alias prm='pass rm'
+alias potpadd='zbarcam -q --raw | pass otp insert $1'
+
+#--------------------------------------------------------#
 # MANAGE DOTFILES
 
 alias dot='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles"'
