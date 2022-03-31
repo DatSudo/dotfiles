@@ -17,9 +17,10 @@ alias v=nvim
 alias cl=clear
 alias et=exit
 alias python=python3
+alias py=python3
 alias rm=trash-put
+alias si='sc-im'
 alias fz='fzf --reverse --border=sharp --height=50%'
-alias fzh='sudo find . | fzf --reverse --border=sharp --height=50%'
 alias unzip='bsdtar xvf'
 alias sxiv='sxiv -a'
 alias feh='feh --scale-down --auto-zoom'
@@ -35,17 +36,21 @@ alias dpv='cd /win10/Users/Darylle/'
 alias gst='git status'
 alias gadd='git add $1'
 alias gcomt='git commit -m $1'
+alias undocom='git reset --soft HEAD~1'
+alias addreset='git reset'
 alias gp='git push'
 
 #--------------------------------------------------------#
 # PASS
 
 alias potp='pass otp'
-alias passup='pass update -p'
-alias passp='pass git push'
-alias passa='pass git add .'
+alias psup='pass update -p'
+alias psp='pass git push'
+alias psf='pass find'
+alias pst='pass git status'
+alias psa='pass git add .'
 alias prm='pass rm'
-alias potpadd='zbarcam -q --raw | pass otp insert $1'
+alias potpa='zbarcam -q --raw | pass otp insert $1'
 
 #--------------------------------------------------------#
 # MANAGE DOTFILES
