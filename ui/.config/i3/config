@@ -128,6 +128,9 @@ bindsym $mod+Shift+z exec --no-startup-id rofi -modi "Clipboard:greenclip print"
 bindsym $mod+F1 exec --no-startup-id eww open scheds
 bindsym $mod+Shift+F1 exec --no-startup-id eww close scheds
 
+# SHOW PASSMENU
+bindsym $mod+F9 exec --no-startup-id ~/.local/bin/passmenu
+
 # EDIT CONFIG FILES
 bindsym $mod+F2 exec --no-startup-id ~/.local/bin/config_opt
 
