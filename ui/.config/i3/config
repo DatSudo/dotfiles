@@ -124,9 +124,11 @@ bindsym Shift+Print exec --no-startup-id flameshot gui
 # SHOW CLIPBOARD
 bindsym $mod+Shift+z exec --no-startup-id rofi -modi "Clipboard:greenclip print" -show Clipboard -run-command '{cmd}'
 
-# SHOW SCHEDULE
-bindsym $mod+F1 exec --no-startup-id eww open scheds
-bindsym $mod+Shift+F1 exec --no-startup-id eww close scheds
+# SHOW CLASS SCHEDULE
+bindsym $mod+F1 exec --no-startup-id eww open --toggle scheds
+
+# SHOW TO-DO LIST
+bindsym $mod+F5 exec --no-startup-id eww open --toggle tdlist
 
 # SHOW PASSMENU
 bindsym $mod+F9 exec --no-startup-id ~/.local/bin/passmenu
@@ -230,7 +232,8 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 # START WINDOW IN FLOAT
-for_window [class="VirtualBox Machine"] floating enable, move position center
+for_window [class="Thunar"] floating enable, resize set 600px 600px, move position center
+for_window [class="virt-manager"] floating enable, resize set 600px 600px, move position center
 
 ###### STARTUP ######
 
