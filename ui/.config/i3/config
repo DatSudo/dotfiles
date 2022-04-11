@@ -130,6 +130,9 @@ bindsym $mod+F1 exec --no-startup-id eww open --toggle scheds
 # SHOW TO-DO LIST
 bindsym $mod+F5 exec --no-startup-id eww open --toggle tdlist
 
+# SHOW GAMES
+bindsym $mod+F10 exec --no-startup-id ~/.local/bin/games_opt
+
 # SHOW PASSMENU
 bindsym $mod+F9 exec --no-startup-id ~/.local/bin/passmenu
 
