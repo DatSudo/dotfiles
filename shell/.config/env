@@ -12,3 +12,5 @@ export VIMINIT='let $MYVIMRC = !has("nvim") ? "$HOME/.config/vim/vimrc" : "$HOME
 export VIMDOTDIR="$HOME/.config/vim"
 
 export ZDOTDIR="$HOME/.config/zsh"
+
+export PATH="$HOME/files/documents/dev/scripts:$PATH"

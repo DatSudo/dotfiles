@@ -13,3 +13,23 @@ function crun(){
 function pi(){
     pass insert $1 && pass git push
 }
+
+function upgit() {
+    git add . && git commit -m $1 && git push
+}
+
+function dl() {
+    cd "$(find ~/files/downloads/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
+
+function doc() {
+    cd "$(find ~/files/documents/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
+
+function vid() {
+    cd "$(find ~/files/videos/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
+
+function dev() {
+    cd "$(find ~/files/documents/dev/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
