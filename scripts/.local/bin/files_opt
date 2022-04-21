@@ -6,8 +6,7 @@ menu="Ebooks
 Dev Courses
 Dev Manuals
 P Files
-Sc Files
-"
+Sc Files"
 
 open_file() {
     s=$(ls $dir/"$1" | rofi -dmenu -i -p "Open subject:")
