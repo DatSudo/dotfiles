@@ -19,6 +19,7 @@ alias et=exit
 alias python=python3
 alias py=python3
 alias rm=trash-put
+alias sw='swallow'
 alias si='sc-im'
 alias fz='fzf --reverse --border=sharp --height=50%'
 alias unzip='bsdtar xvf'

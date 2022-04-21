@@ -1,4 +1,4 @@
-function acs(){
+acs(){
   (( $+commands[python] )) || {
     echo "[error] No python executable detected"
     return
@@ -6,30 +6,38 @@ function acs(){
   alias | python $HOME/.local/bin/alias_cheatsheet.py $@
 }
 
-function crun(){
+crun(){
     gcc $1 && ./a.out
 }
 
-function pi(){
+pi(){
     pass insert $1 && pass git push
 }
 
-function upgit() {
+upgit() {
     git add . && git commit -m $1 && git push
 }
 
-function dl() {
+dl() {
     cd "$(find ~/files/downloads/ -type d -print | fzf --reverse --border=sharp --height=50%)"
 }
 
-function doc() {
+doc() {
     cd "$(find ~/files/documents/ -type d -print | fzf --reverse --border=sharp --height=50%)"
 }
 
-function vid() {
+vid() {
     cd "$(find ~/files/videos/ -type d -print | fzf --reverse --border=sharp --height=50%)"
 }
 
-function dev() {
+dev() {
     cd "$(find ~/files/documents/dev/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
+
+conf() {
+    cd "$(find ~/.config/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
+
+scr() {
+    v "$(find ~/.local/bin -print | fzf --reverse --border=sharp --height=50%)"
 }
