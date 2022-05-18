@@ -41,3 +41,11 @@ conf() {
 scr() {
     v "$(find ~/.local/bin -print | fzf --reverse --border=sharp --height=50%)"
 }
+
+y1() {
+    cd "$(find /win10/Users/Darylle/Desktop/Library/Year\ 1/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}
+
+libr() {
+    cd "$(find /win10/Users/Darylle/Desktop/Library/ -type d -print | fzf --reverse --border=sharp --height=50%)"
+}

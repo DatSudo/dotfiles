@@ -14,10 +14,9 @@ alias l='ls -l'
 
 # common commands
 alias v=nvim
+alias code=vscodium
 alias cl=clear
 alias et=exit
-alias python=python3
-alias py=python3
 alias rm=trash-put
 alias sw='swallow'
 alias si='sc-im'
@@ -27,6 +26,11 @@ alias sxiv='sxiv -a'
 alias feh='feh --scale-down --auto-zoom'
 alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
 alias nfetchimg='neofetch --kitty --source ~/.config/neofetch/custom_img/nfetch_img.jpg'
+
+# Python commands
+alias python=python3
+alias py=python3
+alias actenv='source $(pwd)/venv/bin/activate'
 
 # Go to my Win10 files
 alias dpv='cd /win10/Users/Darylle/'

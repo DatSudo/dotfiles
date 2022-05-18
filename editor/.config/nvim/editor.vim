@@ -16,7 +16,6 @@ set ignorecase
 set cmdheight=2
 set updatetime=300
 set shortmess+=c
-set foldmethod=indent
 syntax enable
 
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg

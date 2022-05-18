@@ -6,6 +6,9 @@ map <Right> navigate next
 map J zoom out
 map K zoom in
 
+set selection-clipboard clipboard
+
+####### COLOR SCHEME #######
 set notification-error-bg       "#1d2021" # bg
 set notification-error-fg       "#fb4934" # bright:red
 set notification-warning-bg     "#1d2021" # bg
