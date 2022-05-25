@@ -21,7 +21,6 @@ alias rm=trash-put
 alias sw='swallow'
 alias si='sc-im'
 alias fz='fzf --reverse --border=sharp --height=50%'
-alias unzip='bsdtar xvf'
 alias sxiv='sxiv -a'
 alias feh='feh --scale-down --auto-zoom'
 alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
