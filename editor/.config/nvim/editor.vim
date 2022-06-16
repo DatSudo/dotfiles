@@ -18,6 +18,27 @@ set updatetime=300
 set shortmess+=c
 syntax enable
 
+filetype plugin indent on
+
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
 
 let g:Hexokinase_highlighters = ['backgroundfull']
+
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_ignore_filters = [
+            \ 'Underfull',
+            \ 'Overfull',
+            \ 'Font shape'
+            \]
+let g:vimtex_compiler_latexmk = {
+            \ 'executable': 'latexmk',
+            \ 'options': [
+                \ '-xelatex',
+                \ '-file-line-error',
+                \ '-synctex=1',
+                \ '-interaction=nonstopmode'
+                \],
+            \}
+let g:vimtex_compiler_latexmk_engines = {
+    \ '_'                : '-xelatex',
+    \}

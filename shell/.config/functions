@@ -49,3 +49,4 @@ y1() {
 libr() {
     cd "$(find /win10/Users/Darylle/Desktop/Library/ -type d -print | fzf --reverse --border=sharp --height=50%)"
 }
+

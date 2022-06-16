@@ -234,6 +234,8 @@ for_window [window_type="menu"] floating enable
 # START WINDOW IN FLOAT
 for_window [class="Thunar"] floating enable, resize set 600px 600px, move position center
 for_window [class="virt-manager"] floating enable, resize set 600px 600px, move position center
+for_window [class="Tk"] floating enable
+for_window [class="gnuplot_qt"] floating enable
 
 ###### STARTUP ######
 

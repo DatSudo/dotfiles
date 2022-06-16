@@ -14,3 +14,8 @@ export VIMDOTDIR="$HOME/.config/vim"
 export ZDOTDIR="$HOME/.config/zsh"
 
 export PATH="$HOME/files/documents/dev/scripts:$PATH"
+export PATH="/etc/texmf:$PATH"
+export PATH="/usr/local/share/texmf:$PATH"
+export PATH="/usr/share/texmf:$PATH"
+export PATH="/usr/share/texmf-dist:$PATH"
+export PATH="/var/lib/texmf:$PATH"
