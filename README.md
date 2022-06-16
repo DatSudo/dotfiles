@@ -50,17 +50,17 @@ ___
     - Clone this repository in `$HOME/dotfiles` for simpler setup
     - You can stow them one-by-one with
     ```bash
-    $ # Example: stowing nvim, vim config (if cloned in $HOME/dotfiles)
-    $ stow editor/
-    $ # If another location
-    $ stow -t ~ editor/
+    # Example: stowing nvim, vim config (if cloned in $HOME/dotfiles)
+    stow editor/
+    # If another location
+    stow -t ~ editor/
     ```
     - Or all of them
     ```bash
-    $ # if cloned in $HOME/dotfiles
-    $ stow .
-    $ # Other location
-    $ stow -t ~ .
+    # if cloned in $HOME/dotfiles
+    stow .
+    # Other location
+    stow -t ~ .
     ```
 
 #### Other configurations
