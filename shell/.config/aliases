@@ -18,10 +18,12 @@ alias code=vscodium
 alias cl=clear
 alias et=exit
 alias rm=trash-put
+alias kal='khal calendar'
 alias sw='swallow'
 alias si='sc-im'
 alias fz='fzf --reverse --border=sharp --height=50%'
 alias sxiv='sxiv -a'
+alias cjupyter='docker start -ai wizardly_chaplygin'
 alias feh='feh --scale-down --auto-zoom'
 alias nfetch='neofetch --ascii ~/.config/neofetch/custom_ascii/archlogo.txt'
 alias nfetchimg='neofetch --kitty --source ~/.config/neofetch/custom_img/nfetch_img.jpg'
@@ -71,6 +73,7 @@ alias dotpush='git --git-dir="$HOME/.dotfiles/.git" --work-tree="$HOME/.dotfiles
 alias archup='sudo pacman -Syu'
 alias upall='sudo pacman -Syuu'
 alias instpkg='sudo pacman -S'
+alias rmpkg='sudo pacman -Rns $1'
 alias fupall='sudo pacman -Syyu'
 
 # list aur packages
