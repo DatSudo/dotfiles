@@ -133,6 +133,9 @@ bindsym $mod+F5 exec --no-startup-id eww open --toggle tdlist
 # SHOW PASSMENU
 bindsym $mod+F9 exec --no-startup-id ~/.local/bin/passmenu
 
+# SHOW GAMES MENU
+bindsym $mod+g exec --no-startup-id ~/.local/bin/games_opt
+
 # EDIT CONFIG FILES
 bindsym $mod+F2 exec --no-startup-id ~/.local/bin/config_opt
 
@@ -217,11 +220,6 @@ bindsym $mod+r mode "resize"
 ##### WINDOWS ######
 
 # TODO LAUNCH X APP IN Y WORKSPACE
-for_window [class="firefox"] move to workspace $ws2
-# for_window [class="brave"] move to workspace $ws2
-for_window [class="thunar"] move to workspace $ws3
-for_window [class="obsidian"] move to workspace $ws4
-for_window [class="libreoffice"] move to workspace $ws4
 
 # FORCE FLOAT FOR POP-UPS ETC
 for_window [window_role="pop-up"] floating enable
