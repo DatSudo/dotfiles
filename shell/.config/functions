@@ -50,3 +50,6 @@ libr() {
     cd "$(find /win10/Users/Darylle/Desktop/Library/ -type d -print | fzf --reverse --border=sharp --height=50%)"
 }
 
+schoolsched() {
+    khal new -a school "$1" "$2" "$3" "$4" -g meeting -r weekly
+}
