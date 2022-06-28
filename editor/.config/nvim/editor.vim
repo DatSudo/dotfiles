@@ -30,15 +30,3 @@ let g:vimtex_quickfix_ignore_filters = [
             \ 'Overfull',
             \ 'Font shape'
             \]
-let g:vimtex_compiler_latexmk = {
-            \ 'executable': 'latexmk',
-            \ 'options': [
-                \ '-xelatex',
-                \ '-file-line-error',
-                \ '-synctex=1',
-                \ '-interaction=nonstopmode'
-                \],
-            \}
-let g:vimtex_compiler_latexmk_engines = {
-    \ '_'                : '-xelatex',
-    \}
