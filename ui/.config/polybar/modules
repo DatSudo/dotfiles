@@ -1,44 +1,52 @@
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/mpd]
-type = internal/mpd
+type = custom/script
+exec =~/.local/bin/mscroll
+tail = true
+interval = 0
 
-host = 127.0.0.1
-port = 6600
-interval = 1
+label-foreground = ${color.fg0}
+label-padding-right = 2
 
-format-online = <label-song> <bar-progress> <icon-prev>  <toggle>  <icon-next> 
-format-online-font = 2
-format-online-padding = 2
-format-online-background = ${color.bg0}
-format-online-foreground = ${color.fg0}
-
-format-stopped = <label-offline>
-format-stopped-font = 2
-format-stopped-background = ${color.bg0}
-format-stopped-foreground = ${color.fg0}
-
-format-offline = <label-offline>
-format-offline-font = 2
-format-offline-background = ${color.bg0}
-format-offline-foreground = ${color.fg0}
-
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-next = 
-icon-prev = 
-
-label-song = ┃   %artist% - %title%
-
-label-offline = ┃   MPD
-label-offline-foreground = ${color.fg0}
-label-offline-background = ${color.bg0}
-
-bar-progress-width = 10
-bar-progress-indicator = 
-bar-progress-fill = ━
-bar-progress-empty = ─
+;type = internal/mpd
+;
+;host = 127.0.0.1
+;port = 6600
+;interval = 1
+;
+;format-online = <label-song> <bar-progress> <icon-prev>  <toggle>  <icon-next> 
+;format-online-font = 2
+;format-online-padding = 2
+;format-online-background = ${color.bg0}
+;format-online-foreground = ${color.fg0}
+;
+;format-stopped = <label-offline>
+;format-stopped-font = 2
+;format-stopped-background = ${color.bg0}
+;format-stopped-foreground = ${color.fg0}
+;
+;format-offline = <label-offline>
+;format-offline-font = 2
+;format-offline-background = ${color.bg0}
+;format-offline-foreground = ${color.fg0}
+;
+;icon-play = 
+;icon-pause = 
+;icon-stop = 
+;icon-next = 
+;icon-prev = 
+;
+;label-song = ┃   %artist% - %title%
+;
+;label-offline = ┃   MPD
+;label-offline-foreground = ${color.fg0}
+;label-offline-background = ${color.bg0}
+;
+;bar-progress-width = 10
+;bar-progress-indicator = 
+;bar-progress-fill = ━
+;bar-progress-empty = ─
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
