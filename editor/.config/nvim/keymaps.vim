@@ -28,9 +28,12 @@ nnoremap <CR> :noh<CR>
 map <C-_> :Commentary<CR>
 
 " nvim-tree
-nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+" nnoremap <C-n> :NvimTreeToggle<CR>
+" nnoremap <leader>r :NvimTreeRefresh<CR>
+" nnoremap <leader>n :NvimTreeFindFile<CR>
+
+" CHADTree
+nnoremap <C-n> :CHADopen<CR>
 
 " Toggle terminal
 map <C-t> :ToggleTerm<CR>
